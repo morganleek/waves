@@ -16,6 +16,7 @@ Buoy data recording
 
 ## Wave Data
 | Tag        | Data Type           | Definition  |
+| ------------- |:-------------:| -----:|
 | `buoy_id` | | | 
 | `wave_height_significant` | | | 
 | `wave_height_max` | | | 
