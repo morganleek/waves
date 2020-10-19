@@ -1,18 +1,22 @@
 # Waves
 Buoy data recording
 
+# Folder Structure
+In the root folder of your CSV's directory include a file called buoys.csv
+
 # CSV Definition
 
 ## Buoy Information
 | Tag        | Data Type           | Definition  |
 | ------------- |:-------------:| -----:|
-| `buoy_serial` | | |
-| `type` | | |
-| `enabled` | | |
-| `order` | | |
-| `data` | | |
-| `start_date` | | |
-| `end_date` | | |
+| `buoy_id` | varchar(255) | Unique identifier for this buoy in it's current location |
+| `type` | varchar(255) | Buoy manufacturer |
+| `enabled` | tinyint(1) | `0` not visible, `1` visible, `2` map only, `3` chart only  |
+| `order` | mediumint(9) | Order in list |
+| `data` | text | Additional data |
+| `start_date` |  datetime (Required) | Deployed date |
+| `end_date` |  datetime | Completion date if ended |
+| `last_updated` | datetime (Required) | Date when most recent CSV was written for this buoy |
 
 ## Wave Data
 | Tag        | Data Type           | Definition  |
