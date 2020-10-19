@@ -42,8 +42,6 @@ Buoy data recording
 | `longitude` | | | 
 | `data` | | | 
 | `timestamp` | | | 
-| `TEMP` | | | 
 | `temperature` | | | 
-| `WIND` | | | 
 | `wind_speed` | | | 
 | `wind_direction` | | |
