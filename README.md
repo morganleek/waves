@@ -19,7 +19,7 @@ In the root folder of your CSV's directory include a file called `buoys.csv` as 
 
 ### Buoy Information
 | Tag        | Data Type           | Definition  |
-| ------------- | ------------- | -----:|
+| ------------- | -------------:| -----:|
 | `buoy_id` | varchar(255) **(Required)** | Unique identifier for this buoy in it's current location |
 | `type` | varchar(255) **(Required)** | Buoy manufacturer |
 | `enabled` | tinyint(1) **(Required)** | `0` not visible, `1` visible, `2` map only, `3` chart only  |
