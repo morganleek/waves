@@ -20,7 +20,8 @@ In the root folder of your CSV's directory include a file called `buoys.csv` as 
 ### Buoy Information
 | Tag        | Data Type           | Definition  |
 | ------------- | -------------:| -----:|
-| `buoy_id` | varchar(255) **(Required)** | Unique identifier for this buoy in it's current location |
+| `buoy_id` | varchar(255) **(Required)** | Unique identifier for this buoy |
+| `label` | varchar(255) **(Required)** | Label for pretty title for the buoy I.e. 'Port Headland Deap Sea' |
 | `type` | varchar(255) **(Required)** | Buoy manufacturer |
 | `enabled` | tinyint(1) **(Required)** | `0` not visible, `1` visible, `2` map only, `3` chart only  |
 | `order` | mediumint(9) **(Required)** | Order in list |
