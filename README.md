@@ -7,7 +7,7 @@ In the root folder of your CSV's directory include a file called `buoys.csv` as 
 ### CSV Folder Structure
 `/buoy_id/YEAR/MONTH/DAY/FILENAME.csv`
 
-| Item | Definition |
+| Item | Description |
 | ---- | ---------- |
 | `buoy_id` | Unique identifier for this buoy in it's current location |
 | `YEAR` | Full digit year I.e. `2021` |
@@ -18,47 +18,47 @@ In the root folder of your CSV's directory include a file called `buoys.csv` as 
 ## CSV Definition
 
 ### Buoy Information
-| Tag        | Data Type           | Definition  |
-| ------------- | -------------:| -----:|
-| `buoy_id` | varchar(255) **(Required)** | Unique identifier for this buoy |
-| `label` | varchar(255) **(Required)** | Label for pretty title for the buoy I.e. 'Port Headland Deap Sea' |
-| `type` | varchar(255) **(Required)** | Buoy manufacturer |
-| `enabled` | tinyint(1) **(Required)** | `0` not visible, `1` visible, `2` map only, `3` chart only  |
-| `order` | mediumint(9) **(Required)** | Order in list |
-| `data` | text **(Required)** | Additional data |
-| `start_date` |  datetime **(Required)** | Deployed date |
-| `end_date` |  datetime | Completion date if ended |
-| `first_updated` | varchar(255) | Filename for first CSV written |
-| `last_updated` | varchar(255) | Filename for most recently written CSV |
+| Tag | Type | Description |
+| ------------- | ------------- | ----- |
+| `buoy_id` | `string` | Unique identifier for this buoy **Required** |
+| `label` | `string` | Label for pretty title for the buoy I.e. 'Port Headland Deap Sea' **Required** |
+| `type` | `string` | Buoy manufacturer **Required** |
+| `enabled` | `boolean` | `0` not visible, `1` visible, `2` map only, `3` chart only  **Required** |
+| `order` | `integer` | Order in list **Required** |
+| `data` | `string` | Additional data **Required** |
+| `start_date` |  `datetime` | Deployed date **Required** |
+| `end_date` |  `datetime` | Completion date if ended |
+| `first_updated` | `string` | Filename for first CSV written |
+| `last_updated` | `string` | Filename for most recently written CSV |
 
 ### Wave Data
-| Tag        | Data Type           | Definition  |
-| ------------- |:-------------:| -----:|
-| `buoy_id` | | | 
-| `wave_height_significant` | | | 
-| `wave_height_max` | | | 
-| `wave_height_avg` | | | 
-| `wave_steepness` | | | 
-| `period_peak` | | | 
-| `period_mean` | | | 
-| `period_significant` | | | 
-| `direction_peak` | | | 
-| `direction_mean` | | | 
-| `directional_spread_peak` | | | 
-| `directional_spread_mean` | | | 
-| `crest_peak` | | | 
-| `number_of_zero_crossings` | | | 
-| `t_avg` | | | 
-| `t_max` | | | 
-| `tp5` | | | 
-| `te` | | | 
-| `t10` | | | 
-| `h10` | | | 
-| `hm0` | | | 
-| `latitude` | | | 
-| `longitude` | | | 
-| `data` | | | 
-| `timestamp` | | | 
-| `temperature` | | | 
-| `wind_speed` | | | 
-| `wind_direction` | | |
+| Tag | Type | Description |
+| ------------- | ------------- | ----- |
+| `buoy_id` | `string` | Unique identifier for this buoy **Required** | 
+| `wave_height_significant` | `float` | Significant wave height | 
+| `wave_height_max` | `float` | Max wave height | 
+| `wave_height_avg` | `float` | Average wave height | 
+| `wave_steepness` | `float` | Wave steepness | 
+| `period_peak` | `float` | Peak period | 
+| `period_mean` | `float` | Mean period | 
+| `period_significant` | `float` | Significant Period | 
+| `direction_peak` | `float` | Peak direction | 
+| `direction_mean` | `float` | Mean direction | 
+| `directional_spread_peak` | `float` | Peak directional spread | 
+| `directional_spread_mean` | `float` | Mean directional spread | 
+| `crest_peak` | `float` | Peak crest | 
+| `number_of_zero_crossings` | `integer` | Number of zero crossings | 
+| `t_avg` | `float` | | 
+| `t_max` | `float` | | 
+| `tp5` | `float` | | 
+| `te` | `float` | | 
+| `t10` | `float` | | 
+| `h10` | `float` | | 
+| `hm0` | `float` | | 
+| `latitude` | `float` | Latitude, up to 6 decimal places | 
+| `longitude` | `float` | Longitude, up to 6 decimal places | 
+| `data` | `string` | Additional data | 
+| `timestamp` | `datetime` | UTC date time in the format `yyyy-mm-dd hh:mm:ss` | 
+| `temperature` | `float` | Temperature in celcius | 
+| `wind_speed` | `float` | Wind speed in knots | 
+| `wind_direction` | `float` | Wind direction in degrees |
